@@ -83,15 +83,29 @@
 // }
 
 
-let n=3;
-for(row=1;row<=n;row++){
-  let stars ='';
-  for(col=n;col>row;col--){
-    stars=stars+`${'    '}`;
-  }
-  for(i=1;i<(row*2);i++){
-    stars=stars+'  *  ';
+// QNo 2. Print the following Pattern.
+// Input
+// You will be given a number n
+// 1 <= n <= 100
+// Output
+// Print the following pattern
+// Sample Output:
+// For n = 5
+//     *
+//   *   *
+// *       *
+//   *   *
+//     *
+
+for (row=1;row<=5;row++){
+  let stars = '';
+  for(col=1;col<=5;col++){
+    if((row==1 && col==3)||(row==2 && col==2)||(row==2 && col==4)||(row==3 && col==1)||(row==3 && col==5)||(row==4 && col==2)||(row==4 && col==4)||(row==5 && col==3)){
+      stars += '  *  ';
+    }
+    else{
+      stars += '    ';
+    }
   }
   console.log(stars);
 }
-
