@@ -67,18 +67,31 @@
 //    *       *
 // *              *
 
-let n=5;
-for(let row=1;row<=5;row++){
-  let stars='';
-  for(let col=1;col<=5;col++){
-   if(row==col || (row+col==6)){
-    stars += '  *  ';
-   }
-   else{
-    stars += '     ';
-   }
+// let n=5;
+// for(let row=1;row<=5;row++){
+//   let stars='';
+//   for(let col=1;col<=5;col++){
+//    if(row==col || (row+col==6)){
+//     stars += '  *  ';
+//    }
+//    else{
+//     stars += '     ';
+//    }
+//   }
+//   console.log(stars);
+  
+// }
+
+
+let n=3;
+for(row=1;row<=n;row++){
+  let stars ='';
+  for(col=n;col>row;col--){
+    stars=stars+`${'    '}`;
+  }
+  for(i=1;i<(row*2);i++){
+    stars=stars+'  *  ';
   }
   console.log(stars);
-  
 }
 
